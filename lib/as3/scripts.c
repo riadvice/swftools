@@ -86,10 +86,6 @@ void swf_AddButtonLinks(SWF*swf, char stop_each_frame, char events)
     __ getlocal_0(c);
     __ constructsuper(c,0);
 
-    __ getlex(c, "[package]flash.system::Security");
-    __ pushstring(c, "*");
-    __ callpropvoid(c, "[package]::allowDomain", 1);
-    
     if(stop_each_frame || has_buttons) {
         int frame = 0;
         tag = swf->firstTag;
